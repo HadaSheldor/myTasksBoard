@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Mansalva', cursive;
+    font-size: large;
+}
+
+/* doc BG img */
+body {
+    background-image: url("img/tile.jpg");
+}
+
+#topHeader {
+    padding: 20px;
+}
+
+#mainHeader {
+    font-family: 'Mansalva', cursive;
+    font-size: 72px;
+    font-weight: bolder;
+    color: #3a1c0f;
+    text-align: center;
+}
+
+#bTop {
+    font-family: 'Mansalva', cursive;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #3a1c0f;
+    text-align: center; 
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.container {
+    background-image: url("img/formbg.jpg");
+    width: 750px;
+    margin: auto;
+    background-position: center center; 
+}
+
+label {
+    background-color:rgba(247, 247, 247, 0.5);
+}
+
+.newDivNote {
+    background-image: url("img/notebg.png");
+    background-repeat: no-repeat;
+    text-align: left;
+    float: left;
+    width: 200px;
+    height: 320px;
+    background-position:center;
+    background-size: contain;
+    padding: 75px 0px 10px 15px; /*t,r,b,l*/ 
+    margin-left: 50px;
+    
+    /* new note's fadeIn appearance - https://stackoverflow.com/questions/11660710/css-transition-fade-in */
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+/* new note's fadeIn appearance - https://stackoverflow.com/questions/11660710/css-transition-fade-in */
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.typedTaskText {
+    width: 130px;
+    height: 150px; 
+    overflow: hidden;
+}
+
+.typedTaskText:hover {
+    overflow-y: auto;
+}
+
+.typedTaskTime, .typedTaskDate{
+    font-weight: bold;
+}
+
+.close {
+    visibility: hidden;
+    margin-right: 35px;
+} 
+
+.newDivNote:hover .close {
+    visibility: visible;
+}
+
+#myFooter {
+    /* reset it to the default layout of a block-level element */
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    margin-top: 200px;
+    background-color:rgba(247, 247, 247, 0.3);
+    font-weight: bold;
+    font-size: larger;
+}
+
+@media only screen and (max-width: 768px) {
+    /* desktop */
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+
+    /* mobile phones */
+    [class*="col-"] {
+      width: 100%;
+    }
+}

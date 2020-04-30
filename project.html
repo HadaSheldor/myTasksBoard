@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Task Board</title>
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon-96x96.png">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Mansalva|Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8c01731a83.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="js/project_1.js"></script>
+    <script src="js/project_2.js"></script>
+</head>
+
+<body onload="onloadDisplayNotesData()">
+    <!-- header -->
+    <header id="topHeader">
+            <h1 id="mainHeader">My Task Board</h1>
+    </header>
+      
+    <!-- new  tasks -->
+    <div class="container">
+        <form class="form-horizontal needs-validation" id="myForm" novalidate>
+            <!-- text -->
+            <div class="row">
+                <div class="col-md-4 align-self-center">
+                    <label for="noteText" class="control-label col-md-12 mt-4"><h4 class="text-center" style="color: #21159c">Task Details</h4></label>
+                </div>
+                <div class="input-group col-md-6 align-self-center">
+                    <textarea type="text" class="form-control col-md-8 rounded-0 mt-3" id="noteText" rows="4" required></textarea>
+                </div>
+            </div>
+            
+            <!-- date -->
+            <div class="row">
+                <div class="col-md-4 align-self-center">
+                    <label for="noteDate" class="control-label col-md-12 mt-4"><h4 class="text-center" style="color: #21159c">Task Date</h4></label>
+                </div>
+                <div class="input-group col-md-4 align-self-center">
+                    <input type="date" class= "form-control col-md-8 mt-3" id="noteDate" required>
+                </div>
+            </div>
+            
+            <!-- time -->
+            <div class="row">
+                <div class="col-md-4 align-self-center">
+                    <label for="noteTime" class="control-label col-md-12 mt-4"><h4 class="text-center" style="color: #21159c">Task Time</h4></label>
+                </div>
+                <div class="input-group col-md-4 align-self-center">
+                    <input type="time" class= "form-control col-md-7 mt-3" id="noteTime" required>
+                </div>
+            </div>
+            
+            <!-- buttons -->
+            <div class="row justify-content-start ml-2 mt-3">
+                <input type="button" id="noteSave" value="Save" class="btn btn-success col-md-1 offset-md-4 mr-3 mb-4" onclick="validateDataFromUser()">
+                <input type="reset" id="noteDiscard" value="Discard" class="btn btn-danger col-md-1 mb-4 mr-3">  
+            </div>
+        </form>
+    </div> <!--container's END-->
+    
+    <!-- saved tasks -->
+    <div class="row" id="userNotes">
+    </div>
+    
+    <!-- back to top link -->
+    <div>
+        <a href="#topHeader" id="bTop">(Back to Top)</a>
+    </div>
+    
+    <!-- footer -->
+    <footer id="myFooter">
+        &copy;Copyright Hadas 2019
+    </footer>
+
+</body>
+</html>
