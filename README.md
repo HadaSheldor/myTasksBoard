@@ -1,4 +1,4 @@
 # myTasksBoard
-Built with javaScript, css and bootstrap
+View here: https://hadasheldor.github.io/myTasksBoard/
 
-view here: https://hadasheldor.github.io/myTasksBoard/
+Built with javaScript, css and bootstrap
